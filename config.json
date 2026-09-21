@@ -6,10 +6,10 @@
   },
 
   "storage": {
-    "root": "/home/grx/TmpFs/data",
-    "files_dir": "/home/grx/TmpFs/data/files",
-    "tmp_dir": "/home/grx/TmpFs/data/tmp",
-    "database": "/home/grx/TmpFs/data/tempdrop.db"
+    "root": "/home/<YOUR_USER_NAME>/TmpFs/data",
+    "files_dir": "/home/<YOUR_USER_NAME>/TmpFs/data/files",
+    "tmp_dir": "/home/<YOUR_USER_NAME>/TmpFs/data/tmp",
+    "database": "/home/<YOUR_USER_NAME>/TmpFs/data/tempdrop.db"
   },
 
   "limits": {

@@ -5,9 +5,9 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=tempdrop
-Group=tempdrop
-ExecStart=/usr/local/bin/tempdrop /etc/tempdrop/config.json
+User=<YOUR_USER_NAME>
+Group=<YOUR_USER_GROUP_NAME>
+ExecStart=/build/tempdrop config.json
 Restart=on-failure
 RestartSec=3
 

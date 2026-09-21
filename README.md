@@ -38,10 +38,11 @@ Internet
 ```
 ## How to run
 
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
-cmake --build build -j$(nproc)
+'cmake -S . -B build -DCMAKE_BUILD_TYPE=Release'
 
-.build/tempdrop .config.json
+'cmake --build build -j$(nproc)'
+
+'.build/tempdrop .config.json'
 
 ## Reliability model
 

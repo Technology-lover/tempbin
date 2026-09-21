@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TempDrop</title><link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<header><div class="brand"><span class="dot"></span>TempDrop</div><span class="tag">temporary workspace</span></header>
+<main>
+<section id="home" class="view active">
+  <div class="hero"><p class="eyebrow">PRIVATE • EPHEMERAL • SIMPLE</p><h1>Share without<br><span>keeping it forever.</span></h1><p class="sub">A lightweight pastebin and temporary file drop. Everything expires automatically.</p></div>
+  <div class="choices">
+    <button class="choice" onclick="showView('paste')"><b>Pastebin</b><small>Drop text, snippets and notes</small><i>↗</i></button>
+    <button class="choice" onclick="showView('files')"><b>Temporary file drop</b><small>Drag, drop and share files</small><i>↗</i></button>
+  </div>
+</section>
+
+<section id="paste" class="view">
+ <div class="toolbar"><button onclick="showView('home')">← Home</button><h2>Pastebin</h2><span id="pasteStatus"></span></div>
+ <div class="paste-layout">
+  <div class="panel editor"><textarea id="pasteText" placeholder="Paste something here..."></textarea><button class="primary" onclick="createPaste()">Create paste</button></div>
+  <div class="panel"><div class="panel-head"><b>Recent pastes</b><button onclick="loadPastes()">↻</button></div><div id="pastes" class="list"></div></div>
+ </div>
+</section>
+
+<section id="files" class="view">
+ <div class="toolbar"><button onclick="showView('home')">← Home</button><h2>Temporary file drop</h2><span id="fileStatus"></span></div>
+ <div id="drop" class="drop" ondragover="event.preventDefault();this.classList.add('drag')" ondragleave="this.classList.remove('drag')" ondrop="dropFiles(event)">
+  <div class="upload-icon">↑</div><h2>Drop files here</h2><p>or</p><label class="primary">Choose files<input id="picker" type="file" multiple hidden onchange="uploadFiles(this.files)"></label>
+  <small>Maximum file size: <span id="maxSize">20 MB</span></small>
+ </div>
+ <div class="panel files-panel"><div class="panel-head"><b>Recent uploads</b><button onclick="loadFiles()">↻</button></div><div id="filesList" class="list"></div></div>
+</section>
+</main>
+<script src="/app.js"></script>
+</body></html>

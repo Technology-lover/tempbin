@@ -1,0 +1,9 @@
+build/
+bin/
+*.o
+*.out
+data/
+deploy/
+tmp.txt
+test.txt
+config.exam*

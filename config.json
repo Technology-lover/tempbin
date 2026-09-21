@@ -1,0 +1,32 @@
+{
+  "server": {
+    "bind_address": "127.0.0.1",
+    "port": 8080,
+    "threads": 4
+  },
+
+  "storage": {
+    "root": "/home/grx/TmpFs/data",
+    "files_dir": "/home/grx/TmpFs/data/files",
+    "tmp_dir": "/home/grx/TmpFs/data/tmp",
+    "database": "/home/grx/TmpFs/data/tempdrop.db"
+  },
+
+  "limits": {
+    "max_file_size_mb": 20,
+    "max_paste_size_kb": 512,
+    "file_expiry_hours": 24,
+    "paste_expiry_hours": 24
+  },
+
+  "cleanup": {
+    "interval_seconds": 60
+  },
+
+  "security": {
+    "max_filename_length": 180,
+    "max_pastes_per_page": 50,
+    "max_files_per_page": 50
+  }
+}
+

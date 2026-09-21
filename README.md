@@ -36,6 +36,12 @@ Internet
      metadata            /files
                          /tmp
 ```
+## How to run
+
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j$(nproc)
+
+.build/tempdrop .config.json
 
 ## Reliability model
 

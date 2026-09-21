@@ -38,17 +38,17 @@ Internet
 ```
 ## How to run
 
-'''bash
+```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
-'''
+```
 
-'''bash
+```bash
 cmake --build build -j$(nproc)
-'''
+```
 
-'''bash
+```bash
 .build/tempdrop .config.json
-'''
+```
 
 ## Reliability model
 

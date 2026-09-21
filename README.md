@@ -38,11 +38,17 @@ Internet
 ```
 ## How to run
 
-'cmake -S . -B build -DCMAKE_BUILD_TYPE=Release'
+'''bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+'''
 
-'cmake --build build -j$(nproc)'
+'''bash
+cmake --build build -j$(nproc)
+'''
 
-'.build/tempdrop .config.json'
+'''bash
+.build/tempdrop .config.json
+'''
 
 ## Reliability model
 
@@ -56,26 +62,6 @@ On every startup:
 4. The cleanup worker scans `expires_at <= current_time`.
 
 An application crash therefore cannot reset the lifetime of an object.
-
-## Ubuntu installation
-
-```bash
-sudo ./deploy/ubuntu-install.sh
-```
-
-Edit `/etc/tempdrop/config.json`.
-
-For example:
-
-```json
-"max_file_size_mb": 50
-```
-
-Then restart:
-
-```bash
-sudo systemctl restart tempdrop
-```
 
 No recompilation is required for limit changes.
 
